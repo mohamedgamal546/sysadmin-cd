@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-front
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-front
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx:stable
           ports:
             - containerPort: 80
